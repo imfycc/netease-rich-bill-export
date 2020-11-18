@@ -5,6 +5,7 @@
 // @description  网易有钱账单导出
 // @author       https://imfy.cc @小猿大圣
 // @match        https://qian.163.com/pc/index.html
+// @updateURL    https://github.com/Youthink/netease-rich-bill-export/blob/master/netease-rich-bill-export.user.js
 // @grant        none
 // ==/UserScript==
 
