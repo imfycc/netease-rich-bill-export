@@ -36,7 +36,7 @@
 
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    a.download = "netease-bill-data.xlsx";
+    a.download = 'netease-bill-data.csv';
     document.body.append(a);
     a.click();
     document.body.remove(a);
