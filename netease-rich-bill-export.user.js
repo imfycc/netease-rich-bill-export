@@ -89,8 +89,8 @@
     for(let num = 0; num < tradeTypeArr.length; num++) {
       const res = await loadData(0, tradeTypeArr[num]);
       const data = await tranformResponse(res);
-      const { pagination = {} } = data;
-      const { totalPage = 1 } = pagination;
+      const { pagination } = data || {};
+      const { totalPage = 1 } = pagination || {};
 
       for(let page = 0; page < totalPage; page++) {
         requestQueues.push(getBillData(page, tradeTypeArr[num]));
@@ -129,8 +129,8 @@
 
   async function tranformResponse(res) {
     const text = await res.text();
-    const { data = {} } = JSON.parse(text || {});
-    return data;
+    const { data } = JSON.parse(text || {});
+    return data || {};
   }
 
   async function getBillData(currPage, tradeType) {
